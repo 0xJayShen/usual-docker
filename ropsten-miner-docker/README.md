@@ -49,3 +49,9 @@ customize the container resources, you just have to overwrite the variables. For
 ```bash
 $ CPUS=4 make start
 ```
+sudo yum-config-manager \
+    --add-repo \
+    https://docs.docker.com/v1.13/engine/installation/linux/repo_files/centos/docker.repo
+ sudo yum makecache fast
+ sudo yum -y install docker-engine
+ sudo systemctl start docker
