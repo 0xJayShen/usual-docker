@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  app:
+    build: ./app
+    # command: -datadir=node
+    volumes:
+      # - ./app:/app
+      - ./data:/home/bitcoind-testnet/node
+    command:
+      -printtoconsole
+      -testnet=1
+      -rest
+      -rpcallowip=0.0.0.0/0
+      -rpcpassword=bar
+      -rpcport=18333
+      -rpcuser=foo
+      -server
+      -txindex=1
+      -datadir=node
+      -listen=0
+    ports:
+      - 18333:18333
+
+# https://docs.docker.com/compose/networking/#configuring-the-default-network, "Using a pre-existing network"
+# networks:
+#   default:
+#     external:
+#       name: bigapirb_default
