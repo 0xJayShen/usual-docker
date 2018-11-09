@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  omnicored:
+    # image: mpugach/omnicored
+    image: e5993702621f
+
+    # volumes:
+    #   - omnicore:/home/bitcoin/.bitcoin
+    ports:
+      - "18332:18332"
+    command: "-server -testnet -txindex -rpcallowip=0.0.0.0/0 -printtoconsole"
+
+volumes:
+  omnicore:
