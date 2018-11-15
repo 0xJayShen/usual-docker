@@ -14,6 +14,6 @@ if [[ $(docker images -a|grep rippled:latest|wc -l) -gt "0" ]]; then
 fi
 
 echo "Building image"
-docker build --t rippled $(self)/../.
+docker build --tag rippled:latest $(self)/../.
 
 echo "Done, you can now run $(self)/up"

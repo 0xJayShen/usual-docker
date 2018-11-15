@@ -17,11 +17,11 @@ fi
 
 docker run \
     -dit \
-    --name rippled-container \
+    --name rippled \
     -p $PORT:80 \
-    -p 5005:5005\
-    -p 6006:6006\
+    -p 5005:5005 \
+    -p 6006:6006 \
     -v $(self)/../config:/config/ \
-    rippled
+    rippled:latest
 
 docker logs -f rippled
