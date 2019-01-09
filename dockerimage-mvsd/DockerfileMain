@@ -13,5 +13,5 @@ ADD mvs.conf /root/.metaverse/mvs-test.conf
 
 EXPOSE 8820
 
-CMD [  "sh", "-c", "/var/mvs/mvsd -t"]
+CMD [  "sh", "-c", "/var/mvs/mvsd ${ENVIRONMENT}"]
 
