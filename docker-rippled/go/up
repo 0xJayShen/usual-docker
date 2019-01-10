@@ -22,7 +22,7 @@ docker run \
     -p 0.0.0.0:5005:5005 \
     -p 6006:6006 \
     -v $(self)/../config:/config/ \
-    - /oneroot/xrp/db:/var/lib/rippled/db \
+    -v /oneroot/xrp/db:/var/lib/rippled/db \
     rippled:latest
 
 docker logs -f rippled
